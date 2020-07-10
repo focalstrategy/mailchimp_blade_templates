@@ -1,0 +1,17 @@
+{
+    "name": "focalstrategy/email_template",
+    "description": "Library for generating email templates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Grant Pearce",
+        "email": "grant@focalstrategy.com"
+    }],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+              "FocalStrategy\\EmailTemplate\\": "src"
+        }
+    }
+}
