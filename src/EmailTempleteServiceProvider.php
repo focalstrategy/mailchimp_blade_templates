@@ -14,13 +14,13 @@ class EmailTemplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . '/config/email_template.php' => config_path('email_template.php')], 'config');
         $laravel_version = $this->getLaravelVersion();
         if ($laravel_version == 4) {
             $this->package('focalstrategy/email_template');
             View::addNamespace('email_template', __DIR__.'/views');
         } elseif ($laravel_version == 5) {
             $this->loadViewsFrom(__DIR__ . '/views', 'email_template');
+            $this->publishes([__DIR__ . '/config/email_template.php' => config_path('email_template.php')], 'config');
         }
     }
 
