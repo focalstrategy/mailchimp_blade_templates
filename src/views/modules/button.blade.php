@@ -11,7 +11,7 @@
 							<td align="center" valign="top" width="600" class="flexibleContainerCell bottomShim">
 
 								<!-- CONTENT TABLE // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="260" class="emailButton">
+                                <table border="0" cellpadding="0" cellspacing="0" width="260" class="{{ !empty($class) ? $class : 'emailButton' }}">
                                 	<tr>
                                 		<td align="center" valign="middle" class="buttonContent">
                                 			<a href="{{ $url }}" target="_blank">{{ $link_text }}</a>
