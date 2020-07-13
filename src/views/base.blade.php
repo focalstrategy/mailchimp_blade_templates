@@ -112,7 +112,7 @@
                <!-- EMAIL CONTAINER // -->
                <table border="0" cellpadding="0" cellspacing="0" width="600" id="emailBody">
 
-                 @include('emails.modules.col_2_image_r_text_l',
+                 @include('email_template::modules.col_2_image_r_text_l',
                   [
                   'title' => 'Imperial Net',
                   'content' => '',
@@ -122,7 +122,7 @@
                   @yield('body')
 
                   @if(!isset($no_notice) || (isset($no_notice) && !$no_notice))
-                    @include('emails.modules.custom_start_well')
+                    @include('email_template::modules.custom_start_well')
                     <tr>
                       <td colspan=2 valign="top" class="textContent">
                         Sent on {{ Carbon\Carbon::now()->timezone('Europe/London')->format('d/m/Y H:i') }}.
@@ -131,7 +131,7 @@
                         @endif
                       </td>
                     </tr>
-                    @include('emails.modules.custom_end_well')
+                    @include('email_template::modules.custom_end_well')
                   @endif
                 </table>
                 <!-- // EMAIL CONTAINER -->
